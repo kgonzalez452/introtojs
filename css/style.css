@@ -1,24 +1,51 @@
 body{
     margin: 10% 4% 4% 4%;
+    background-color: RGB(0, 120, 184); /*css addition 1*/
 }
 .userContainer{
     display: flex;
     height: 25em;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 .invoiceContainer{
+    /* border: 1px solid black; */
     margin-top: 4em;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
 }
+.invoice{
+    border: 1px solid black;
+    margin: 3% 3% 0% 3%;
+    padding: 2%;
+    width: 250px;
+    height: auto;
+    background-color: RGB(1, 166, 255); /*css addition 2*/
+    font-family: 'Times New Roman', Times, serif; /*css addition 3*/
+    text-shadow: 2px 2px 4px #1f6180; /*css addition 5*/
+}
+.invoice:hover{
+    box-shadow: 25px 25px; /*css addition 4*/
+}
+.invoice > p{
+    position: relative;
+    margin: 5px;
+    left: 25%;
+    font-size: 18px;
+}
 .userProfile{
     border: 1px solid black;
     display: flex;
     width: 60%;
     height: 100%;
+    background-color: RGB(32, 162, 232); /*css addition 6*/
+    border-radius: 50px 50px 50px 50px;  /*css addition 7*/  
+    text-shadow: 2px 2px 4px #1f6180 /*css addition 8*/
+}
+.userProfile:hover{
+    box-shadow: 25px 25px; /*css addition 9*/
 }
 .user{
     height: auto;
@@ -34,9 +61,34 @@ body{
 }
 p{
     font-size: 22px;
+    height: 25px;
+}
+p.Invoices{
+    transform: translateY(50px);
+    font-family: Inconsolata;
 }
 img{
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 100%;   
+}
+/* Animation addition */
+img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-5deg); }
+    20% { transform: translate(-3px, 0px) rotate(5deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(5deg); }
+    50% { transform: translate(-1px, 2px) rotate(-5deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-5deg); }
+    80% { transform: translate(-1px, -1px) rotate(5deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-5deg); }
 }
